@@ -1,3 +1,4 @@
-import Comment from './comment.js'
+import Ui_Creator  from './ui-creator.js';
+export { default as Comment } from './comment.js'; 
 
-export default Comment;
+ Ui_Creator.init();
