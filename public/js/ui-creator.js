@@ -17,10 +17,18 @@ export default class Ui_Creator {
             temp_container.appendChild(this.textarea()); 
             temp_container.appendChild(this.toolbar());  
             temp_container.appendChild(this.submit_button());  
+            temp_container.appendChild(this.comments_main_container());
+
             elm.replaceWith(temp_container);
 
         }); 
     } 
+
+    static comments_main_container() {
+        let tmp = document.createElement('ul');
+        tmp.classList.add('comments_main_container');
+        return tmp;
+    }
 
     static textarea() {
         let tmp = document.createElement('textarea');
