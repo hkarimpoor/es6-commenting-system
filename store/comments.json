@@ -9,7 +9,8 @@
         "likeNo" : "20",
         "dislikeNo" : "50",
         "hasReply" : "0",
-        "replyId" : "48888"
+        "replyId" : "48888",
+        "parentId" : "23555"
     },
 
     "1" : {
@@ -22,7 +23,8 @@
         "likeNo" : "20",
         "dislikeNo" : "50",
         "hasReply" : "0",
-        "replyId" : "48888"
+        "replyId" : "48888",
+        "parentId" : "23555"
     },
 
     "2" : {
@@ -35,7 +37,8 @@
         "likeNo" : "20",
         "dislikeNo" : "50",
         "hasReply" : "0",
-        "replyId" : "48888"
+        "replyId" : "48888",
+        "parentId" : "23555"
     },
 
     "3" : {
@@ -48,7 +51,8 @@
         "likeNo" : "20",
         "dislikeNo" : "50",
         "hasReply" : "0",
-        "replyId" : "48888"
+        "replyId" : "48888",
+        "parentId" : "23555"
     },
 
     "4" : {
@@ -61,7 +65,8 @@
         "likeNo" : "20",
         "dislikeNo" : "50",
         "hasReply" : "0",
-        "replyId" : "48888"
+        "replyId" : "48888",
+        "parentId" : "23555"
     }
 
 }
