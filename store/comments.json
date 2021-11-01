@@ -4,7 +4,13 @@
         "commentText" : "hello world this is first comment",
         "date" : "2021-04-06",
         "time" : "14:20",
-        "userId" : "45216387",
+        "commenter" : {
+            "id" : "0",
+            "username" : "hello world this is first user",
+            "avatarLink" : "http://myavatar.jpg",
+            "profileLink" : "http://myprofile",
+            "reported" : "true"
+        },
         "reported" : "false",
         "likeNo" : "20",
         "dislikeNo" : "50",
@@ -18,7 +24,13 @@
         "commentText" : "hello world this is first comment",
         "date" : "2021-04-06",
         "time" : "14:20",
-        "userId" : "45216387",
+        "commenter" : {
+            "id" : "1",
+            "username" : "hello world this is first user",
+            "avatarLink" : "http://myavatar.jpg",
+            "profileLink" : "http://myprofile",
+            "reported" : "true"
+        },
         "reported" : "false",
         "likeNo" : "20",
         "dislikeNo" : "50",
@@ -32,7 +44,13 @@
         "commentText" : "hello world this is first comment",
         "date" : "2021-04-06",
         "time" : "14:20",
-        "userId" : "45216387",
+        "commenter" : {
+            "id" : "1",
+            "username" : "hello world this is first user",
+            "avatarLink" : "http://myavatar.jpg",
+            "profileLink" : "http://myprofile",
+            "reported" : "true"
+        },
         "reported" : "false",
         "likeNo" : "20",
         "dislikeNo" : "50",
@@ -46,7 +64,13 @@
         "commentText" : "hello world this is first comment",
         "date" : "2021-04-06",
         "time" : "14:20",
-        "userId" : "45216387",
+        "commenter" : {
+            "id" : "1",
+            "username" : "hello world this is first user",
+            "avatarLink" : "http://myavatar.jpg",
+            "profileLink" : "http://myprofile",
+            "reported" : "true"
+        },
         "reported" : "false",
         "likeNo" : "20",
         "dislikeNo" : "50",
@@ -60,7 +84,13 @@
         "commentText" : "hello world this is first comment",
         "date" : "2021-04-06",
         "time" : "14:20",
-        "userId" : "45216387",
+        "commenter" : {
+            "id" : "1",
+            "username" : "hello world this is first user",
+            "avatarLink" : "http://myavatar.jpg",
+            "profileLink" : "http://myprofile",
+            "reported" : "true"
+        },
         "reported" : "false",
         "likeNo" : "20",
         "dislikeNo" : "50",

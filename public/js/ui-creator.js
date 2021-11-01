@@ -1,7 +1,8 @@
 export default class Ui_Creator {
     
+    static comment_list_container = this.comment_list();;
   
-    constructor() {
+    constructor() { 
     }
   
     static init() {
@@ -9,15 +10,20 @@ export default class Ui_Creator {
         let temp_container = null;
 
         //Find all custom tags and replace it with div with unique id 
-        [...commenting_system_tags].forEach(elm => { 
+        [...commenting_system_tags].forEach(elm => {  
 
             temp_container = document.createElement('div');
             temp_container.id = 'commenting_system_container_' + Math.floor(Math.random() * 100);
 
             temp_container.appendChild(this.textarea()); 
             temp_container.appendChild(this.toolbar());  
-            temp_container.appendChild(this.submit_button());  
+            temp_container.appendChild(this.submit_button());   
+
+            temp_container.appendChild(this.comment_list_container);  
             temp_container.appendChild(this.comments_main_container());
+
+
+            this.inject_comments(temp_container,elm.getAttribute('data-comments-url'));
 
             elm.replaceWith(temp_container);
 
@@ -52,7 +58,20 @@ export default class Ui_Creator {
         return tmp;
     }
 
-  
+    
+    static comment_list(){
+        let tmp = document.createElement('div');
+        tmp.classList.add('comment_list');
+        return tmp;
+    } 
+
+    static inject_comments(_temp_container, _url){
+        fetch(_url)
+        .then(response => response.json())
+        .then(json => {
+            this.comment_list_container.innerHTML = JSON.stringify(json);
+        });
+    } 
      
 }
 
