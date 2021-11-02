@@ -69,9 +69,27 @@ export default class Ui_Creator {
         fetch(_url)
         .then(response => response.json())
         .then(json => {
-            this.comment_list_container.innerHTML = JSON.stringify(json);
+            this.comment_list_container.appendChild(this.get_thread_template(json));
         });
     } 
+
+    static get_comment_template(_aComment){
+        let tmp = document.createElement('p');
+        tmp.innerHTML = _aComment.commentText;
+        return tmp;
+    }
+
+    static get_thread_template(_comment_list){
+        let tmp = document.createElement('ul');
+        Object.entries(_comment_list).forEach((aComment) => {
+            const [key, comment] = aComment; 
+            let itemList = document.createElement('li');
+            itemList.appendChild(this.get_comment_template(comment));
+            tmp.appendChild(itemList); 
+          }); 
+        
+        return tmp;
+    }
      
 }
 
