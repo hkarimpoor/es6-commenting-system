@@ -1,6 +1,8 @@
 const express = require('express'); 
 const port = 3000;
 var path = require('path');
+const fs = require('fs'); 
+
 
 var app = module.exports = express();
 
@@ -22,6 +24,14 @@ app.engine('.html', require('ejs').__express);
 app.set('views', path.join(__dirname, 'views'));
 
 // Path to our public directory
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+)
+
+app.use(express.json())
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -37,9 +47,14 @@ app.get('/', (req, res) => {
 app.get('/comments', (req, res) => {
   res.sendFile(path.join(__dirname, 'store/comments.json'));
 });
+ 
 
-app.get('/users', (req, res) => {
-  res.sendFile(path.join(__dirname, 'store/users.json'));
+app.post('/comment/new', (req, res) => {
+  console.log(req.body); 
+  let data = JSON.stringify(req.body); 
+  fs.appendFileSync(path.join(__dirname, 'store/comments.json'), data);
+  res.sendFile(path.join(__dirname, 'store/comments.json'));
+
 });
 
 app.listen(port, () => {

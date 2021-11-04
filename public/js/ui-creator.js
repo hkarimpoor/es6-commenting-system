@@ -49,6 +49,15 @@ export default class Ui_Creator {
         tmp.classList.add('submit_button');
         tmp.type = "button"
         tmp.innerHTML = "Submit";
+        tmp.addEventListener('click', (e)=>{
+            fetch('/comment/new', {
+                headers: { "Content-Type": "application/json; charset=utf-8" },
+                method: 'POST',
+                body: JSON.stringify({
+                    comment: 'bew comment0'
+                })
+            });
+        });
         return tmp;
     } 
 
