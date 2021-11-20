@@ -11,24 +11,35 @@ export default class Comment {
         userProfileLink:'',
         isLoggedin: ''
     };
+    cUI = '';
 
   
     constructor(brand) {
-        this.carname = brand;
+        this.cUI = brand;
     }
   
-    present() {
-        return 'I have a ' + this.carname;
+    get cUI() {
+        return 
+            `<div   data-threadId=${this.cThreadId} 
+                    data-parentId=${this.cParentId} 
+                    data-childrenIds=${this.cChildrenIds}                    
+            >
+                <p>${this.cText}</p>
+                <tool-bar></tool-bar>
+                <img src="${this.cOwner.userAwatarUrl}" alt="${this.cOwner.userName}" width="100" height="100">
+                <span data-userId="${thhis.cOwner.userId}" data-isLoggedIn="${this.cOwner.isLoggedin}">${this.cOwner.userName}</span>
+
+            </div>`;
     }
 
-    static hello() {
-        return "Hello!!";
-    }
+    // static hello() {
+    //     return "Hello!!";
+    // }
   
     //get something() {} // getter method
    // set something() {} // setter method
   
-    [Symbol.iterator]() {}  
+    //[Symbol.iterator]() {}  
   }
 
   

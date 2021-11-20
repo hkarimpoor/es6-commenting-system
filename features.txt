@@ -1,0 +1,29 @@
+reply on reply
+mentioning system
+edit, previw
+like 
+report, flag
+login on comment 
+avatar 
+auther card on hovering auther name 
+load more by lazy load
+filter 
+sort
+date-time
+number of comment 
+number of like and dislike 
+voice comment 
+sticker char 
+emoji 
+gif 
+take a picture to add
+click to expand for large text 
+pagination - lazy load
+banned word service 
+tracking (https://tugayyaldiz.github.io/vue-comment-grid/#/fullscreen)
+show/hide replies ( lazy load replies)
+magnifier for comment text zoom by hovering mouse
+colorfull active comment
+share/send/screenshot of ac omment 
+copy link to comment ( similar to linkedin )
+auto expand text box size by wrting big comment 

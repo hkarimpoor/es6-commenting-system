@@ -45,15 +45,21 @@ app.get('/', (req, res) => {
 });
 
 app.get('/comments', (req, res) => {
-  res.sendFile(path.join(__dirname, 'store/comments.json'));
+
+    try {
+      const data = fs.readFileSync(path.join(__dirname, 'store/comments.txt'), 'utf8');
+      var comments = data.split(',');
+      res.send(JSON.stringify(comments));
+    } catch (err) {
+      res.send("Error to read file");
+    }
 });
  
 
-app.post('/comment/new', (req, res) => {
-  console.log(req.body); 
+app.post('/comment/new', (req, res) => { 
   let data = JSON.stringify(req.body); 
-  fs.appendFileSync(path.join(__dirname, 'store/comments.json'), data);
-  res.sendFile(path.join(__dirname, 'store/comments.json'));
+  fs.appendFileSync(path.join(__dirname, 'store/comments.json'), ',' + data);
+  res.send(data);
 
 });
 
